@@ -24,7 +24,7 @@ const App = () => {
   return (
     <Container className="netflix-container">
       <Header as='h1' inverted textAlign='center' style={{ margin: '2rem 0' }}>
-        Customer Gallery
+        👀 คุณคือใคร ?
       </Header>
       <Grid>
         {
