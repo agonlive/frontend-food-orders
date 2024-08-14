@@ -41,3 +41,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.netflix-container .ui.grid {
+  margin: 0 -0.5rem;
+}
+
+.netflix-container .column {
+  padding: 0.5rem !important;
+}
+/* 
+@media screen and (max-width: 767px) {
+  .netflix-container .ui.grid .column {
+    width: 33.33% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .netflix-container .ui.grid .column {
+    width: 50% !important;
+  }
+} */

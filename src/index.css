@@ -124,3 +124,36 @@ button:focus-visible {
 .netflix-image-container:hover .netflix-overlay {
   opacity: 1;
 }
+
+@media (min-width: 768px) {
+  .ui.grid {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .ui.grid > .column:not(.row) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .ui.grid {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  .ui.grid > .column:not(.row) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ui.grid {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .ui.grid > .column:not(.row) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

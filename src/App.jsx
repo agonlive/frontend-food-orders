@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Image, Header } from 'semantic-ui-react';
+import { Container, Grid, Image, Header, GridColumn, GridRow } from 'semantic-ui-react';
+// import { GridRow, GridColumn, Grid, Image } from 'semantic-ui-react'
+
 import axios from 'axios';
 import './App.css';
 
@@ -24,25 +26,27 @@ const App = () => {
       <Header as='h1' inverted textAlign='center' style={{ margin: '2rem 0' }}>
         Customer Gallery
       </Header>
-      <Grid columns={4} doubling stackable>
+      <Grid>
         {
-          console.log('c =>', customers ?? '...')
+          // console.log('c =>', customers ?? '...')
         }
-        {customers.map((customer) => (
-          <Grid.Column key={customer.id} className="netflix-item">
-            <div className="netflix-image-container">
-              <Image
-                src={`http://localhost:1337${customer.image.url ?? ''}`}
-                alt={customer.name}
-                fluid
-                className="netflix-image"
-              />
-              <div className="netflix-overlay">
-                <p className="netflix-title">{customer.name}</p>
+        <GridRow columns={3}>
+          {customers.map((customer) => (
+            <Grid.Column key={customer.id} className="netflix-item"  >
+              <div className="netflix-image-container">
+                <Image
+                  src={`http://localhost:1337${customer.image.url ?? ''}`}
+                  alt={customer.name}
+                  fluid
+                  className="netflix-image"
+                />
+                <div className="netflix-overlay">
+                  <p className="netflix-title">{customer.name}</p>
+                </div>
               </div>
-            </div>
-          </Grid.Column>
-        ))}
+            </Grid.Column>
+          ))}
+        </GridRow>
       </Grid>
     </Container>
   );
